@@ -2,9 +2,9 @@
 
 ### See 'complete' branch for full version of workshop.
 
-## Purpose
+### Run-time: ~1 hour
 
-Run-time: ~1 hour
+## Purpose
 
 This workshop is designed to target these pain points specific to the Geo-Vermonter project:
 
