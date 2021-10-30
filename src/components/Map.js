@@ -42,7 +42,7 @@ export default function Map(props) {
   });
 
   //reorder the coordinates in elmoreData for Leaflet
-  let seqOutline = elmoreData.geometry.coordinates[0].map((coords) => [
+  let elmOutline = elmoreData.geometry.coordinates[0].map((coords) => [
     coords[1],
     coords[0],
   ]);
@@ -61,7 +61,7 @@ export default function Map(props) {
             attribution='Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
           />
 
-          <Polygon positions={seqOutline} pathOptions={{ color: "blue" }} />
+          <Polygon positions={elmOutline} pathOptions={{ color: "blue" }} />
           <Marker position={props.marker} icon={props.icon} />
         </MapContainer>
       </div>
