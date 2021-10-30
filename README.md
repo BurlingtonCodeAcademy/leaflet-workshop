@@ -1,2 +1,1 @@
-# leaflet-workshop
- workshop designed for Geo-VT project, focuses on leaflet-pip and manipulation of the marker
+## You will need to install leaflet and react-leaflet for this project
