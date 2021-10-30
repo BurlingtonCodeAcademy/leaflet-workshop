@@ -1,5 +1,7 @@
 ## You will need to run NPM install to have all of the necessary dependencies for this project.
 
+### See 'complete' branch for full version of workshop.
+
 ## Purpose
 
 Run-time: ~1 hour
