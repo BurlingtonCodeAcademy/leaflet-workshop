@@ -30,7 +30,7 @@ function App() {
   });
 
   //click event for moving the icon marker
-  const moveMarker = (event) => {};
+  const moveMarker = (event) => {
   //destructuring marker for our use
 
   //creating intermediary variable that holds the id of the button
@@ -50,7 +50,7 @@ function App() {
   //set the lon to the initial lon minus amount
 
   //set the icon to the west facing icon
-
+  }
   return (
     <>
       <div style={styles.App}>
