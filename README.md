@@ -1,1 +1,3 @@
-## You will need to install leaflet and react-leaflet for this project
+## You will need to run NPM install to have all of the necessary dependencies for this project
+
+(workshop guide to be finished)
