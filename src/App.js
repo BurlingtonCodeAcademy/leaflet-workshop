@@ -31,26 +31,33 @@ function App() {
 
   //click event for moving the icon marker
   const moveMarker = (event) => {
-  //destructuring marker for our use
+    //destructuring marker for our use
+    let { lat, lon } = marker;
+    //creating intermediary variable that holds the id of the button
+    let id = event.target.id;
 
-  //creating intermediary variable that holds the id of the button
-
-  //if Go East button is clicked
-
-  //set the lat to the initial lat
-
-  //set the lon to the initial lon plus amount
-
-  //set the icon to the east facing icon
-
-  //if Go West button is clicked
-
-  //set the lat to the initial lat
-
-  //set the lon to the initial lon minus amount
-
-  //set the icon to the west facing icon
-  }
+    //if Go East button is clicked
+    if (id === "east") {
+      setMarker({
+        //set the lat to the initial lat
+        lat: lat,
+        //set the lon to the initial lon plus amount
+        lon: lon + 0.0002,
+      });
+      //set the icon to the east facing icon
+      setIcon(swimE);
+      //if Go West button is clicked
+    } else if (id === "west") {
+      setMarker({
+        //set the lat to the initial lat
+        lat: lat,
+        //set the lon to the initial lon minus amount
+        lon: lon - 0.0002,
+      });
+      //set the icon to the west facing icon
+      setIcon(swimW);
+    }
+  };
   return (
     <>
       <div style={styles.App}>

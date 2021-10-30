@@ -20,25 +20,30 @@ let h2;
 
 export default function Map(props) {
   //useEffect hook for leaflet pip to take effect every rerender of the component
+
   useEffect(() => {
     //turning our file into a L.geoJSON
+    let geoJson = L.geoJSON(elmoreData);
 
     //getting lat from props
-
+    let lat = props.marker.lat;
     //getting lon from props
+    let lon = props.marker.lon;
 
     //getting the result of the layer length by using leaflet-pip
+    let layerLength = leafletPip.pointInLayer([lon, lat], geoJson).length;
 
     //if the layer is greater than 0
-
-    //render h2 to reflect this
-
-    //if the layer is 0
-
-    //render h2 to reflect this
-
-    //use our passed state handler to set the icon
-    
+    if (layerLength > 0) {
+      //render h2 to reflect this
+      h2 = <h2 style={styles.Theme.font}>You are swimmin'!</h2>;
+      //if the layer is 0
+    } else {
+      //render h2 to reflect this
+      h2 = <h2 style={styles.Theme.font}>You are not swimmin'!</h2>;
+      //use our passed state handler to set the icon
+      props.setIcon(notSwim);
+    }
   });
 
   //reorder the coordinates in elmoreData for Leaflet
